@@ -4,7 +4,7 @@ def hist_norm_cat(data):
     # Fit a normal distribution to the data:
     mu, std = norm.fit(data)
     # Plot the histogram.
-    plt.hist(data_, bins=25, density=True, alpha=0.6, color='g')
+    plt.hist(data, bins=25, density=True, alpha=0.6, color='g')
     # Plot the PDF.
     xmin, xmax = plt.xlim()
     x = np.linspace(xmin, xmax, 100)
