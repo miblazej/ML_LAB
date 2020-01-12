@@ -19,7 +19,7 @@ def hist_norm_cat(data):
     s2 = s1 + space / 5
     s3 = s2 + space / 5
     s4 = s3 + space / 5
-    p = pd.cut(train_data["SalePrice"],
+    p = pd.cut(data,
             bins=[describe[3],s1,s2,s3,s4,describe[7]],
             labels=[1,2,3,4,5])
     plt.ylabel("Liczba elementów zbioru")
