@@ -1,4 +1,4 @@
-def hist_norm_cat(data):
+def hist_norm_cat(data,test=False):
     plt.subplot(1,2,1)
     describe = data.describe()
     # Fit a normal distribution to the data:
@@ -23,4 +23,6 @@ def hist_norm_cat(data):
             bins=[describe[3],s1,s2,s3,s4,describe[7]],
             labels=[1,2,3,4,5])
     plt.ylabel("Liczba elementów zbioru")
+    tytul = "Min = {0} Max={1}"
+    plt.title(tytul.format(describe[3],describe[7]))
     p.hist()
